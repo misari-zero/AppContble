@@ -16,6 +16,8 @@ from django.db import models
 #         verbose_name_plural = 'Tipos'
 #         db_table = 'tipo_cli'
 #         ordering = ['id']
+from django.forms import model_to_dict
+
 
 class Client(models.Model):
     # type = models.ForeignKey(Type, on_delete=models.CASCADE)
@@ -29,6 +31,10 @@ class Client(models.Model):
 
     def __str__(self):
         return self.name
+
+    def toJSON(self):
+        item = model_to_dict(self)
+        return item
 
     class Meta:
         verbose_name = 'Cliente'

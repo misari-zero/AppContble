@@ -1,0 +1,28 @@
+{% extends 'list.html' %}
+{% load static %}
+
+{% block head_list %}
+    <script src="{% static 'client/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 5%">Nro</th>
+        <th scope="col" style="width: 17%">Razon social</th>
+        <th scope="col" style="width: 10%">Direccion</th>
+        <th scope="col" style="width: 15%">Ruc</th>
+        <th scope="col" style="width: 15%">F. Registro</th>
+        <th scope="col" style="width: 13%">F. Creacion</th>
+        <th scope="col" style="width: 15%">F. Actualizacion</th>
+{#        <th scope="col" style="width: 5%">Estado</th>#}
+        <th scope="col" style="width: 10%">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

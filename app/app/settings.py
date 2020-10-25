@@ -31,12 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Libs
+    'widget_tweaks',
     # Apps
     'core.erp'
 ]
@@ -106,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-pe'
 
 TIME_ZONE = 'UTC'
 
@@ -132,4 +135,20 @@ STATICFILES_FINDERS =[
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-LOGIN_REDIRECT_URL = '/erp/category/list/'
+# JAZZMIN_SETTINGS = {
+#     # title of the window
+#     "site_title": "AppContable",
+#
+#     # Title on the brand, and the login screen (19 chars max)
+#     "site_header": "AppContable",
+#
+#     # square logo to use for your site, must be present in static files, used for favicon and brand on top left
+#     "site_logo": "img/logo.jpg",
+#
+#     # Welcome text on the login screen
+#     "welcome_sign": "Bienvenido al Administrador AppContable",
+#
+#     # Copyright on the footer
+#     "copyright": "Gianfranco Misari Ortega",
+# }
+
