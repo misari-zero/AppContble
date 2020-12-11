@@ -1,4 +1,4 @@
-{% extends 'body.html' %}
+{% extends 'layout.html' %}
 {% load static %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'lib/datatables-1.10.20/css/dataTables.bootstrap4.min.css' %}"/>
@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="card card-default">
+    <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">
                 <i class="fas fa-search"></i>
@@ -25,7 +25,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <table class="table" id="data">
+            <table class="table table-bordered" id="data">
                 <thead>
                 {% block columns %}
 
@@ -43,6 +43,9 @@
             <a href="{{ create_url }}" class="btn btn-primary btn-flat btnTest">
                 <i class="fas fa-plus"></i>Nuevo Registro
             </a>
+            <a href="{{ list_url }}" class="btn btn-success btn-flat">
+                <i class="fas fa-sync"></i> Actualizar
+            </a>
         </div>
     </div>
 {% endblock %}
@@ -57,7 +60,7 @@
 
             $('.btnTest').on('click', function () {
                 $.ajax({
-                    url: '{% url 'erp:client_list' %}',
+                    url: '{% url 'erp:categoria_list' %}',
                     type: 'POST',
                     data: {id: 1},
                     dataType: 'json'

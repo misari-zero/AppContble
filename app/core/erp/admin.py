@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
-# from core.erp.models import *
-#
-# admin.site.register(Client)
+from core.erp.models import *
+
+admin.site.register(Client)
+admin.site.register(Product)
+# admin.site.register(Factura)

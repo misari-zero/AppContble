@@ -1,5 +1,5 @@
 $(function () {
-    $('#data').DataTable({
+    $('#data').DataTable( {
         responsive: true,
         autoWidth: false,
         destroy: true,
@@ -18,9 +18,9 @@ $(function () {
             {"data": "address"},
             {"data": "ruc"},
             {"data": "fecha"},
-            {"data": "fecha_created"},
-            {"data": "fecha_updated"},
-            {"data": "state"},
+            // {"data": "gender"},
+            // {"data": "state"},
+            {"data": "id"},
         ],
         columnDefs: [
             {
